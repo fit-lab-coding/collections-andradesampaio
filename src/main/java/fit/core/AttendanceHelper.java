@@ -7,10 +7,9 @@ public class AttendanceHelper {
 
     public static Map<String, Boolean> random(int quantAluno, int porcentagemFalta) {
         HashMap<String, Boolean> alunoMap = new HashMap<>();
-        int  porcentagem = (porcentagemFalta * quantAluno) / 100;
 
         for (int i = 0; i < quantAluno; i++) {
-                if ( i < porcentagem ) {
+                if ( i < (porcentagemFalta * quantAluno) / 100 ) {
                     alunoMap.put("test " + i, true);
                 }else {
                     alunoMap.put("test " + i, false);
